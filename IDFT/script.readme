@@ -1,0 +1,39 @@
+## 아날로지 테스트
+[irteam@csm0018 fastText_ra]$ cat anal_test.txt | ./fasttext analogies ./result2/fil9.bin ngrams.idf_sel 1
+
+[irteam@csm0018 fastText_ra]$ ./anal_eval2.py result2/anal.predict ./data/wordanal/word-test.v1.txt
+capital-world   151     355     506     0.298419
+currency        316     4208    4524    0.069850
+city-in-state   5       861     866     0.005774
+family  90      2377    2467    0.036482
+gram1-adjective-to-adverb       218     288     506     0.430830
+gram2-opposite  602     390     992     0.606855
+gram3-comparative       458     354     812     0.564039
+gram4-superlative       669     663     1332    0.502252
+gram5-present-participle        534     588     1122    0.475936
+gram6-nationality-adjective     468     588     1056    0.443182
+gram7-past-tense        1082    517     1599    0.676673
+gram8-plural    395     1165    1560    0.253205
+gram9-plural-verbs      849     483     1332    0.637387
+None    519     351     870     0.596552
+None    0       0       1       0.000000
+[irteam@csm0018 fastText_ra]$ cp anal_eval2.py ../fastText/
+[irteam@csm0018 fastText_ra]$ cd ../fastText
+[irteam@csm0018 fastText]$ ./anal_eval2.py result/anal.predict ./data/wordanal/word-test.v1.txt
+capital-world   136     370     506     0.268775
+currency        286     4238    4524    0.063218
+city-in-state   2       864     866     0.002309
+family  91      2376    2467    0.036887
+gram1-adjective-to-adverb       235     271     506     0.464427
+gram2-opposite  653     339     992     0.658266
+gram3-comparative       470     342     812     0.578818
+gram4-superlative       674     658     1332    0.506006
+gram5-present-participle        623     499     1122    0.555258
+gram6-nationality-adjective     601     455     1056    0.569129
+gram7-past-tense        1132    467     1599    0.707942
+gram8-plural    429     1131    1560    0.275000
+gram9-plural-verbs      874     458     1332    0.656156
+None    580     290     870     0.666667
+None    0       0       1       0.000000
+
+
